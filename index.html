@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pc/style.css" />
+    <link rel="stylesheet" href="css/mobiile/mobile.css" />
+    <title>landing Page</title>
+  </head>
+  <body>
+    <header>
+      <div id="titulo">
+        <h1>Bem Vindo!</h1>
+        <h1>ao Mundo novo</h1>
+      </div>
+      <ul>
+        <a href="#"><li>Inicio</li></a>
+        <a href="#"><li>Mais Opções</li></a>
+        <a href="html/login.html" id="increva-se_btn"><li>Criar login</li></a>
+      </ul>
+    </header>
+    <main>
+      <!--O aside server para quando tem um site tem divs divididas-->
+      <aside>
+        <h2><span>Acesse agora!</span></h2>
+        <h2>o Novo Mundo</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae nam
+          accusamus asperiores, voluptatibus ipsam eligendi tempora ea. Tempore
+          dolorem reiciendis odio eos voluptatibus, officia ea modi eligendi,
+          corrupti dolores ipsam.
+        </p>
+        <form action="#" method="post" id="form">
+          <!--1° input-->
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="inputs"
+            placeholder="E-mail"
+            required
+            oninput="emailValido()"
+          />
+          <span class="span-input">Digite um e-mail válido</span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="inputs"
+            placeholder="Senha"
+            required
+            oninput="MainValidarSenha()"
+          />
+          <span class="span-input">Mínimo 8 caracteres com algum caractere especial</span>
+          <!--3° input-->
+          <input type="submit" value="Entrar >" />
+        </form>
+      </aside>
+
+      <article>
+        <!-- article é uma tag semantica para receber somentes imagens-->
+        <img
+          src="imagens/1724462712972.png_image.png"
+          alt="Jesus tansformano o mundo"
+        />
+      </article>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
