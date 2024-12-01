@@ -1,109 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Icos do email e user-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!--boostrap-->
+    <!-- Boxicons para ícones -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Bootstrap para ícones adicionais -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--Css-->
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/pc/login.css" />
     <title>Novo mundo</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div id="titulo">
-        <h1>Bem Vindo!</h1>
-        <h1>ao Mundo novo</h1>
-      </div>
-      <ul>
-        <a href="../index.html"><li>Inicio</li></a>
-        <a href="#"><li>Mais Opções</li></a>
-      </ul>
+        <div id="titulo">
+            <h1>Bem Vindo!</h1>
+            <h1>ao Mundo novo</h1>
+        </div>
+        <ul>
+            <a href="../index.html"><li>Inicio</li></a>
+            <a href="#"><li>Mais Opções</li></a>
+        </ul>
     </header>
     <main>
-      <aside>
-        <h1>Cadastro do Novo Mundo</h1>
-        
-        <!-- Ícone de olho aberto -->
+        <aside>
+            <h1>Cadastro do Novo Mundo</h1>
+            <form action="#" method="post" id="form">
+                <!-- Campo Nome -->
+                <div class="div-nome">
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        class="inputs nome"
+                        placeholder="Nome"
+                        required
+                        oninput="NomeValido()"
+                    />
+                    <i class="bx bx-user ico-nome"></i>
+                </div>
+                <span class="span-input">Nome deve ter no mínimo 3 caracteres</span>
 
-        <form action="#" method="post" id="form">
-          <div class="div-nome">
-            <input
-              type="text"
-              name="nome"
-              id="nome"
-              class="inputs nome"
-              placeholder="Nome"
-              required
-              oninput="NomeValido()"
-            />
-            <i class="bx bx-user-pin ico-nome icos"></i>
-          </div>
-          <span class="span-input">Nome deve ter no mínimo 3 caracteres</span>
+                <!-- Campo E-mail -->
+                <div class="div-email">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="inputs email"
+                        placeholder="E-mail"
+                        required
+                        oninput="emailValido()"
+                    />
+                    <i class="bx bx-envelope i-email"></i>
+                </div>
+                <span class="span-input">Digite um e-mail válido</span>
 
-          <!--2° input-->
-          <div class="div-email">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="inputs email"
-              placeholder="E-mail"
-              required
-              oninput="emailValido()"
-            />
-            <i class="bx bxl-gmail i-email icos"></i>
-          </div>
-          <span class="span-input">Digite um e-mail válido</span>
+                <!-- Campo Senha -->
+                <div class="div-Senha">
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="inputs password"
+                        placeholder="Senha"
+                        required
+                        oninput="MainValidarSenha()"
+                    />
+                    <i class="bi bi-eye-fill senha2" id="ico-password" onclick="MostrarSenha()"></i>
+                </div>
+                <span class="span-input">
+                    Mínimo de 8 caracteres, sem sequências como 'abcd' ou '1234'. Deve incluir caracteres especiais, como '@$#!&'
+                </span>
 
-          <!--3° input-->
-          <div class="div-Senha">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="inputs password"
-              placeholder="Senha"
-              required
-              
-              oninput="MainValidarSenha()"
-            />
-            <i class="bi bi-eye-fill senha2" id="ico-password" onclick="MostrarSenha()" ></i>
-             
-            <!-- Ícone de olho fechado -->
-          </div>
+                <!-- Confirmar Senha -->
+                <div class="div-senha-valida">
+                    <input
+                        type="password"
+                        name="password2"
+                        id="password-2"
+                        class="inputs senha-validada"
+                        placeholder="Confirme a Senha"
+                        required
+                        oninput="validarSenhas()"
+                    />
+                    <i class="bi bi-eye-fill senha2" id="ico-password2" onclick="MostrarSenha2()"></i>
+                </div>
+                <span class="span-input">Senhas devem ser compatíveis</span>
 
-          <span class="span-input"
-            >Mínimo de 8 caracteres, sem sequências como 'abcd' ou '1234'. Teve
-            ter caracteres especiais ex: '@$#!&'</span
-          >
-
-          <div class="div-senha-valida">
-            <input
-              type="password"
-              name="password"
-              id="password-2"
-              class="inputs senha-validada"
-              placeholder="Senha"
-              required
-              oninput="validarSenhas()"
-            />
-            <i class="bi bi-eye-fill senha2" id="ico-password2" onclick="MostrarSenha()"></i>
-            <!--<i class="material-icons senha2 icos" id="ico-password">visibility_off</i>-->
-          </div>
-          <span class="span-input">Senhas devem ser compativeis</span>
-
-          <!--3° input-->
-          <input type="submit" value="Enviar >" />
-        </form>
-      </aside>
+                <!-- Botão Enviar -->
+                <input type="submit" value="Enviar >" />
+            </form>
+        </aside>
     </main>
-
     <script src="/js/login.js"></script>
-  </body>
+</body>
 </html>
